@@ -1,0 +1,14 @@
+S:\EE\Users\axviareq\VS_2010\StandardizeAddressWPF\StandardizeAddress\bin\Release\StandardizeAddress.exe.config
+S:\EE\Users\axviareq\VS_2010\StandardizeAddressWPF\StandardizeAddress\bin\Release\StandardizeAddress.exe
+S:\EE\Users\axviareq\VS_2010\StandardizeAddressWPF\StandardizeAddress\bin\Release\StandardizeAddress.XmlSerializers.dll
+S:\EE\Users\axviareq\VS_2010\StandardizeAddressWPF\StandardizeAddress\bin\Release\StandardizeAddress.pdb
+S:\EE\Users\axviareq\VS_2010\StandardizeAddressWPF\StandardizeAddress\obj\x86\Release\MainWindow.baml
+S:\EE\Users\axviareq\VS_2010\StandardizeAddressWPF\StandardizeAddress\obj\x86\Release\MainWindow.g.cs
+S:\EE\Users\axviareq\VS_2010\StandardizeAddressWPF\StandardizeAddress\obj\x86\Release\App.g.cs
+S:\EE\Users\axviareq\VS_2010\StandardizeAddressWPF\StandardizeAddress\obj\x86\Release\StandardizeAddress_MarkupCompile.cache
+S:\EE\Users\axviareq\VS_2010\StandardizeAddressWPF\StandardizeAddress\obj\x86\Release\StandardizeAddress.g.resources
+S:\EE\Users\axviareq\VS_2010\StandardizeAddressWPF\StandardizeAddress\obj\x86\Release\StandardizeAddress.Properties.Resources.resources
+S:\EE\Users\axviareq\VS_2010\StandardizeAddressWPF\StandardizeAddress\obj\x86\Release\StandardizeAddress.csproj.GenerateResource.Cache
+S:\EE\Users\axviareq\VS_2010\StandardizeAddressWPF\StandardizeAddress\obj\x86\Release\StandardizeAddress.exe
+S:\EE\Users\axviareq\VS_2010\StandardizeAddressWPF\StandardizeAddress\obj\x86\Release\StandardizeAddress.pdb
+S:\EE\Users\axviareq\VS_2010\StandardizeAddressWPF\StandardizeAddress\obj\x86\Release\StandardizeAddress.XmlSerializers.dll

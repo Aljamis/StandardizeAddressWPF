@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WL5G3N0:definitions xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:WL5G3N1="http://com/cvty/services" xmlns="" name="StandardizeAddressServiceDefinitions" targetNamespace="http://com/cvty/services" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/">
+  <WL5G3N0:types>
+    <xs:schema xmlns:s1="http://com/cvty/services" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="java:com.cvty.standardizeaddress.data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="java:org.cvty.cdqp" />
+      <xs:complexType name="CDQpAddressTO">
+        <xs:complexContent mixed="false">
+          <xs:extension xmlns:java="java:org.cvty.cdqp" base="java:CDQpAddress" />
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="AddrResponse">
+        <xs:sequence>
+          <xs:element xmlns:java="java:com.cvty.standardizeaddress.data" minOccurs="0" maxOccurs="unbounded" name="Addresses" nillable="true" type="java:CDQpAddressTO">
+            <xs:annotation>
+              <xs:documentation>/** 
+ * @return Returns the addresses.
+ */</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="1" name="Success" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>/** 
+ * @return Returns the success.
+ */</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="1" name="FailureDesc" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>/** 
+ * @return Returns the failureDesc.
+ */</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="1" name="Scrubbed" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>/** 
+ * @return Returns the scrubbed.
+ */</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema xmlns:s1="http://com/cvty/services" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="java:org.cvty.cdqp" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="CDQpAddress">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="Addr1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="1" name="Addr2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="1" name="Addr3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="1" name="Addr4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="1" name="City" nillable="true" type="xs:string" />
+          <xs:element minOccurs="1" name="Country" nillable="true" type="xs:string" />
+          <xs:element minOccurs="1" name="State" nillable="true" type="xs:string" />
+          <xs:element minOccurs="1" name="Zip" nillable="true" type="xs:string" />
+          <xs:element minOccurs="1" name="ZipPlus4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="1" name="County" nillable="true" type="xs:string" />
+          <xs:element minOccurs="1" name="Confidence" type="xs:int" />
+          <xs:element minOccurs="1" name="CountyFIPS" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema xmlns:s1="http://com/cvty/services" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://com/cvty/services" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="java:com.cvty.standardizeaddress.data" />
+      <xs:element name="getVersion">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getVersionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="checkAddress">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:java="java:com.cvty.standardizeaddress.data" name="address" type="java:CDQpAddressTO" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="checkAddressResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:java="java:com.cvty.standardizeaddress.data" name="return" type="java:AddrResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="getVersion">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getVersion" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getVersionResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getVersionResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="checkAddress">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:checkAddress" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="checkAddressResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:checkAddressResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="StandardizeAddress">
+    <WL5G3N0:operation name="getVersion" parameterOrder="parameters">
+      <WL5G3N0:input message="WL5G3N1:getVersion" />
+      <WL5G3N0:output message="WL5G3N1:getVersionResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="checkAddress" parameterOrder="parameters">
+      <WL5G3N0:input message="WL5G3N1:checkAddress" />
+      <WL5G3N0:output message="WL5G3N1:checkAddressResponse" />
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="StandardizeAddressServiceSoapBinding" type="WL5G3N1:StandardizeAddress">
+    <WL5G3N2:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <WL5G3N0:operation name="getVersion">
+      <WL5G3N2:operation soapAction="" style="document" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" parts="parameters" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="parameters" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="checkAddress">
+      <WL5G3N2:operation soapAction="" style="document" />
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal" parts="parameters" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal" parts="parameters" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="StandardizeAddressService">
+    <WL5G3N0:port name="StandardizeAddressSoapPort" binding="WL5G3N1:StandardizeAddressServiceSoapBinding">
+      <WL5G3N2:address location="http://adrwslb-fhidev.firsthealth.com:80/StandardizeAddressDEV/StandardizeAddress" />
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>
